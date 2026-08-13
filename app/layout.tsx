@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import { SITE } from "@/lib/constants";
+import { organizationJsonLd } from "@/lib/metadata";
 
 const manrope = localFont({
   src: [
@@ -37,12 +43,12 @@ const roboto = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
-    default: "KUDO Севастополь — Спортивный клуб",
-    template: "%s | KUDO Севастополь",
+    default: SITE.name,
+    template: SITE.titleTemplate,
   },
-  description:
-    "Спортивный клуб KUDO в Севастополе. Тренировки по КУДО для детей и взрослых. Профессиональные тренеры, удобное расписание.",
+  description: SITE.defaultDescription,
 };
 
 export default function RootLayout({
@@ -52,7 +58,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={`${manrope.variable} ${roboto.variable}`}>
-      <body>{children}</body>
+      <body>
+        <JsonLd json={organizationJsonLd} />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <ScrollToTop />
+      </body>
     </html>
   );
 }

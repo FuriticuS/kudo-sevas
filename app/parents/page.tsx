@@ -1,15 +1,30 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
+import ParentsHeroSection from "@/components/parents/ParentsHeroSection";
+import ParentsStatsSection from "@/components/parents/ParentsStatsSection";
+import ParentsSafetySection from "@/components/parents/ParentsSafetySection";
+import ParentsUpbringingSection from "@/components/parents/ParentsUpbringingSection";
+import ParentsDevelopmentSection from "@/components/parents/ParentsDevelopmentSection";
+import ParentsDocumentsSection from "@/components/parents/ParentsDocumentsSection";
+import ParentsReviewsSection from "@/components/parents/ParentsReviewsSection";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Для родителей",
-  description: "Информация для родителей о тренировках по КУДО в Севастополе.",
-};
+  description:
+    "Кудо для детей в Севастополе: безопасность, воспитание, система поясов, расписание и документы для родителей.",
+  path: "/parents",
+});
 
 export default function ParentsPage() {
   return (
-    <main>
-      <h1>Для родителей</h1>
-      <p>Информация для родителей — скоро здесь будет контент.</p>
-    </main>
+    <>
+      <ParentsHeroSection />
+      <ParentsStatsSection />
+      <ParentsSafetySection />
+      <ParentsUpbringingSection />
+      <ParentsDevelopmentSection />
+      <ParentsDocumentsSection />
+      <ParentsReviewsSection />
+    </>
   );
 }

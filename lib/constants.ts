@@ -19,7 +19,7 @@ import type {
 export const NAV_ITEMS: NavItem[] = [
   { label: "Клуб ДОБЛЕСТЬ", href: "/#club" },
   { label: "Для родителей", href: "/parents" },
-  { label: "Галерея", href: "/#gallery" },
+  { label: "Галерея", href: "/gallery" },
   { label: "Отзывы", href: "/#reviews" },
   { label: "Контакты", href: "/#contacts" },
   { label: "KUDO Россия", href: "https://kudo.ru/", external: true },
@@ -222,7 +222,7 @@ export const PARENTS_DEVELOPMENT = {
 };
 
 // ============================================
-// Поясная система
+// Система поясов
 // ============================================
 
 export const BELTS: Belt[] = [

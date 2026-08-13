@@ -1,8 +1,26 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
+import HeroSection from "@/components/sections/HeroSection";
+import FounderSection from "@/components/sections/FounderSection";
+import AboutKudoSection from "@/components/sections/AboutKudoSection";
+import ClubSection from "@/components/sections/ClubSection";
+import ContactsSection from "@/components/sections/ContactsSection";
+import ReviewsSection from "@/components/sections/ReviewsSection";
+
+export const metadata: Metadata = buildMetadata({
+  title: "KUDO Севастополь — реальнее только жизнь",
+  path: "/",
+});
+
 export default function HomePage() {
   return (
-    <main>
-      <h1>KUDO Севастополь</h1>
-      <p>Спортивный клуб — скоро здесь будет контент.</p>
-    </main>
+    <>
+      <HeroSection />
+      <FounderSection />
+      <AboutKudoSection />
+      <ClubSection />
+      <ContactsSection />
+      <ReviewsSection />
+    </>
   );
 }
