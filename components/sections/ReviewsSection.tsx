@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { REVIEWS_MAIN, MEDIA } from "@/lib/constants";
-import SwiperCarousel from "@/components/SwiperCarousel";
+import SwiperCarousel from "@/components/ui/SwiperCarousel";
 import {
   SECTION_DARK,
   CONTAINER,

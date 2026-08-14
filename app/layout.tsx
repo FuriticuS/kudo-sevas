@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import JsonLd from "@/components/JsonLd";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
+import JsonLd from "@/components/ui/JsonLd";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 import { SITE } from "@/lib/constants";
 import { organizationJsonLd } from "@/lib/metadata";
 
