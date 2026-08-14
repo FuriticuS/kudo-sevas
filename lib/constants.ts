@@ -12,10 +12,6 @@ import type {
   MapData,
 } from "./types";
 
-// ============================================
-// Навигация (Header + Footer)
-// ============================================
-
 export const NAV_ITEMS: NavItem[] = [
   { label: "Клуб ДОБЛЕСТЬ", href: "/#club" },
   { label: "Для родителей", href: "/parents" },
@@ -24,10 +20,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Контакты", href: "/#contacts" },
   { label: "KUDO Россия", href: "https://kudo.ru/", external: true },
 ];
-
-// ============================================
-// Контакты
-// ============================================
 
 export const CONTACTS: ContactInfo = {
   address: "ул. Бориса Михайлова, 5В, Севастополь",
