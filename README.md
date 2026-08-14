@@ -35,34 +35,6 @@ npm run lint      # проверка линтером
 | `/parents`   | Для родителей (безопасность, воспитание, развитие, документы, отзывы) |
 | `/gallery`   | Галерея (фото с тренировок и соревнований)            |
 
-## Структура
-
-```
-app/                # App Router: страницы, layout, sitemap, robots
-  page.tsx          # главная страница
-  parents/page.tsx  # страница «Для родителей»
-  gallery/page.tsx  # страница галереи
-  layout.tsx        # корневой layout (шрифты, Header/Footer, JSON-LD)
-  sitemap.ts        # карта сайта
-  robots.ts         # robots.txt
-  globals.css       # глобальные стили и CSS-переменные Tailwind
-components/
-  Header.tsx        # шапка с мобильным меню (client)
-  Footer.tsx        # подвал
-  ScrollToTop.tsx   # кнопка «наверх» (client)
-  SwiperCarousel.tsx# слайдер отзывов/слайдов (client)
-  JsonLd.tsx        # JSON-LD (Schema.org)
-  sections/         # секции главной страницы
-  parents/          # секции страницы «Для родителей»
-lib/
-  constants.ts      # весь контент сайта (данные, тексты, ссылки)
-  types.ts          # TypeScript-типы
-  styles.ts         # все Tailwind-классы (className) как именованные константы
-  metadata.ts       # генерация метаданных и JSON-LD
-public/             # статика: изображения, видео, шрифты
-tailwind.config.ts  # конфиг Tailwind (цвета, шрифты, content)
-```
-
 ## Система стилей
 
 Все `className` вынесены в `lib/styles.ts` как именованные константы. В компонентах подставляются **только имена переменных** — инлайновых Tailwind-строк в JSX нет.
