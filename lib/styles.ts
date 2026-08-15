@@ -147,10 +147,12 @@ export const FOUNDER_WRAP =
   "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 md:grid-cols-[7fr_3fr] md:p-10";
 export const FOUNDER_TEXT = "flex flex-col justify-center";
 export const FOUNDER_QUOTE =
-  "text-5xl font-bold leading-relaxed text-dark";
+  "text-4xl font-bold leading-relaxed text-dark";
 export const FOUNDER_DESC = `mt-6 ${BODY_TEXT}`;
 export const FOUNDER_NAME = "text-2xl font-bold text-dark";
-export const FOUNDER_IMAGE = "mx-auto h-auto w-full max-w-[400px] -mb-10";
+export const FOUNDER_IMAGE = "mx-auto h-auto w-full max-w-[400px] -mb-[105px]";
+export const FOUNDER_ABOUT = "mt-12";
+export const FOUNDER_TITLE = `mt-8 ${SECTION_TITLE} text-dark`;
 
 // ============================================
 // About Kudo

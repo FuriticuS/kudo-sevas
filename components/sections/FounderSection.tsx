@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FOUNDER } from "@/lib/constants";
+import {FOUNDER, ABOUT_KUDO} from "@/lib/constants";
 import {
   FOUNDER_SECTION,
   FOUNDER_WRAP,
@@ -8,6 +8,10 @@ import {
   FOUNDER_DESC,
   FOUNDER_NAME,
   FOUNDER_IMAGE,
+  FOUNDER_ABOUT,
+  FOUNDER_TITLE,
+  ABOUT_BODY,
+  BODY_TEXT,
 } from "@/lib/styles";
 
 export default function FounderSection() {
@@ -20,6 +24,14 @@ export default function FounderSection() {
             <span className={FOUNDER_NAME}>{FOUNDER.name}</span>{" "}
             {FOUNDER.description}
           </p>
+          <h2 className={FOUNDER_TITLE}>Что такое кудо</h2>
+          <div className={ABOUT_BODY}>
+            {ABOUT_KUDO.map((paragraph, i) => (
+              <p key={i} className={BODY_TEXT}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
         <Image
           src={FOUNDER.image}

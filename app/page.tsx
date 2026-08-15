@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/metadata";
 import HeroSection from "@/components/sections/HeroSection";
 import FounderSection from "@/components/sections/FounderSection";
-import AboutKudoSection from "@/components/sections/AboutKudoSection";
 import ClubSection from "@/components/sections/ClubSection";
 import ContactsSection from "@/components/sections/ContactsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
@@ -17,7 +16,6 @@ export default function HomePage() {
     <>
       <HeroSection />
       <FounderSection />
-      <AboutKudoSection />
       <ClubSection />
       <ContactsSection />
       <ReviewsSection />
