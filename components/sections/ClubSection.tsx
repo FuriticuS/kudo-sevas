@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CLUB_INFO, CLUB_SLIDES } from "@/lib/constants";
 import SwiperCarousel from "@/components/ui/SwiperCarousel";
 import {
-  SECTION_DARK,
+  SECTION_CARD,
   SECTION_TITLE_MB_6,
   BODY_TEXT,
   IMG_COVER,
@@ -13,7 +13,7 @@ import {
 
 export default function ClubSection() {
   return (
-    <section id="club" className={SECTION_DARK}>
+    <section id="club" className={SECTION_CARD}>
       <div className={CLUB_WRAP}>
         <div>
           <h2 className={SECTION_TITLE_MB_6}>Клуб Доблесть</h2>

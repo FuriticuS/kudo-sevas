@@ -1,7 +1,7 @@
 import { ABOUT_KUDO } from "@/lib/constants";
 import {
-  SECTION_LIGHT,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_8,
   ABOUT_BODY,
   BODY_TEXT,
@@ -9,8 +9,8 @@ import {
 
 export default function AboutKudoSection() {
   return (
-    <section className={SECTION_LIGHT}>
-      <div className={CONTAINER}>
+    <section className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <h2 className={SECTION_TITLE_MB_8}>Что такое кудо</h2>
         <div className={ABOUT_BODY}>
           {ABOUT_KUDO.map((paragraph, i) => (

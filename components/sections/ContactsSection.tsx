@@ -1,7 +1,7 @@
 import { CONTACTS, SCHEDULE, MAP } from "@/lib/constants";
 import {
-  SECTION_LIGHT,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_6,
   SUBHEADING_CONTACTS,
   LINK_TEL,
@@ -17,8 +17,8 @@ import {
 
 export default function ContactsSection() {
   return (
-    <section id="contacts" className={SECTION_LIGHT}>
-      <div className={CONTAINER}>
+    <section id="contacts" className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <div className={TWO_COL_GRID}>
           <div>
             <h2 className={SECTION_TITLE_MB_6}>Как нас найти</h2>

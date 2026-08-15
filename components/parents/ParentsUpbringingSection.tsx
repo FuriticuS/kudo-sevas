@@ -1,7 +1,7 @@
 import { PARENTS_UPBRINGING, PARENTS_BENEFITS } from "@/lib/constants";
 import {
-  SECTION_LIGHT,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_8,
   BULLET,
   BENEFIT_CARD,
@@ -14,8 +14,8 @@ import {
 
 export default function ParentsUpbringingSection() {
   return (
-    <section className={SECTION_LIGHT}>
-      <div className={CONTAINER}>
+    <section className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <h2 className={SECTION_TITLE_MB_8}>{PARENTS_UPBRINGING.title}</h2>
 
         <p className={UPBRINGING_LEAD}>{PARENTS_UPBRINGING.leadText}</p>

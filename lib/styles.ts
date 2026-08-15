@@ -11,6 +11,13 @@ export const SECTION_LIGHT = "bg-light text-dark";
 export const CONTAINER = "mx-auto max-w-[1440px] px-4 py-20 md:px-8";
 export const CONTAINER_SM = "mx-auto max-w-[1440px] px-4 py-16 md:px-8";
 
+// --- Общий дизайн секции: тёмный фон + красная кисть + белая карточка ---
+export const SECTION_CARD =
+  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 py-20 md:px-8";
+export const CARD_WRAP =
+  "mx-auto max-w-[1440px] rounded bg-light p-6 text-dark md:p-10";
+export const DARK_WRAP = "mx-auto max-w-[1440px]";
+
 // --- Типографика (базовые) ---
 export const SECTION_TITLE =
   "text-3xl font-extrabold uppercase tracking-tight md:text-4xl";
@@ -58,7 +65,9 @@ export const MAP_IFRAME = "h-full min-h-[400px] w-full border-0";
 
 // --- Карточка отзыва ---
 export const REVIEW_CARD =
-  "grid h-full gap-6 rounded-xl border border-white/10 bg-white/5 p-6 md:grid-cols-[240px_1fr] md:p-8";
+  "grid h-full gap-6 rounded-xl border border-black/10 bg-dark p-6 md:grid-cols-[240px_1fr] md:p-8";
+export const REVIEW_CARD_ON_DARK =
+  "grid h-full gap-6 rounded-xl border border-white/10 bg-dark p-6 md:grid-cols-[240px_1fr] md:p-8";
 export const REVIEW_IMAGE =
   "relative h-48 w-full overflow-hidden rounded-lg md:h-full md:min-h-[240px]";
 export const REVIEW_TEXT_WRAP = "flex flex-col justify-center";
@@ -73,7 +82,7 @@ export const BULLET = "mt-1 h-2 w-2 shrink-0 rounded-full bg-primary";
 export const BENEFIT_CARD =
   "flex items-start gap-3 rounded-lg border border-black/10 bg-black/5 px-4 py-3";
 export const BELT_CARD =
-  "rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-base text-light";
+  "rounded-lg border border-black/10 bg-dark px-4 py-3 text-base text-light";
 
 // ============================================
 // Header
@@ -132,14 +141,16 @@ export const HERO_BUTTON = `mt-24 ${BUTTON_PRIMARY}`;
 // ============================================
 // Founder
 // ============================================
+export const FOUNDER_SECTION =
+  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 py-20 md:px-8";
 export const FOUNDER_WRAP =
-  "mx-auto flex max-w-[1440px] flex-col items-center gap-10 px-4 py-20 md:flex-row md:px-8";
-export const FOUNDER_TEXT = "flex-1";
-export const FOUNDER_QUOTE = "text-xl font-bold leading-relaxed text-light md:text-2xl";
+  "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 md:grid-cols-[7fr_3fr] md:p-10";
+export const FOUNDER_TEXT = "flex flex-col justify-center";
+export const FOUNDER_QUOTE =
+  "text-5xl font-bold leading-relaxed text-dark";
 export const FOUNDER_DESC = `mt-6 ${BODY_TEXT}`;
-export const FOUNDER_NAME = "font-bold text-light";
-export const FOUNDER_IMAGE_WRAP =
-  "relative h-72 w-72 shrink-0 overflow-hidden rounded-xl md:h-96 md:w-96";
+export const FOUNDER_NAME = "text-2xl font-bold text-dark";
+export const FOUNDER_IMAGE = "mx-auto h-auto w-full max-w-[400px] -mb-10";
 
 // ============================================
 // About Kudo
@@ -150,7 +161,7 @@ export const ABOUT_BODY = "max-w-3xl space-y-4";
 // Club
 // ============================================
 export const CLUB_WRAP =
-  "mx-auto grid max-w-[1440px] items-center gap-10 px-4 py-20 md:grid-cols-2 md:px-8";
+  "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 text-dark md:grid-cols-2 md:p-10";
 export const SLIDE_4_3 = "relative aspect-[4/3] overflow-hidden rounded-xl";
 
 // ============================================
@@ -176,7 +187,7 @@ export const STATS_TEXT = "max-w-3xl text-2xl font-bold leading-relaxed md:text-
 // Parents Safety
 // ============================================
 export const SAFETY_BODY = "max-w-3xl space-y-6";
-export const SAFETY_QUOTE = "text-lg font-bold italic leading-relaxed text-light";
+export const SAFETY_QUOTE = "text-lg font-bold italic leading-relaxed text-dark";
 export const SAFETY_QUOTE_AUTHOR = "font-bold text-primary";
 
 // ============================================
@@ -218,7 +229,7 @@ export const SCROLL_TO_TOP_ICON = "h-6 w-6";
 // SwiperCarousel
 // ============================================
 export const SWIPER_NAV =
-  "[&_.swiper-pagination-bullet]:bg-light [&_.swiper-pagination-bullet-active]:bg-primary [&_.swiper-button-prev]:text-primary [&_.swiper-button-next]:text-primary";
+  "[&_.swiper-pagination-bullet]:bg-dark [&_.swiper-pagination-bullet-active]:bg-primary [&_.swiper-button-prev]:text-primary [&_.swiper-button-next]:text-primary";
 
 // ============================================
 // Gallery

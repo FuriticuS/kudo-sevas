@@ -1,8 +1,8 @@
 import { PARENTS_DEVELOPMENT, BELTS } from "@/lib/constants";
 import type { Belt } from "@/lib/types";
 import {
-  SECTION_DARK,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_8,
   DEVELOPMENT_INTRO,
   SUBHEADING_BELTS,
@@ -38,8 +38,8 @@ export default function ParentsDevelopmentSection() {
   ];
 
   return (
-    <section className={SECTION_DARK}>
-      <div className={CONTAINER}>
+    <section className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <h2 className={SECTION_TITLE_MB_8}>{PARENTS_DEVELOPMENT.title}</h2>
         <p className={DEVELOPMENT_INTRO}>{PARENTS_DEVELOPMENT.intro}</p>
 

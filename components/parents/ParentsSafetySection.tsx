@@ -1,7 +1,7 @@
 import { PARENTS_SAFETY } from "@/lib/constants";
 import {
-  SECTION_DARK,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_8,
   BODY_TEXT,
   SAFETY_BODY,
@@ -11,8 +11,8 @@ import {
 
 export default function ParentsSafetySection() {
   return (
-    <section className={SECTION_DARK}>
-      <div className={CONTAINER}>
+    <section className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <h2 className={SECTION_TITLE_MB_8}>{PARENTS_SAFETY.title}</h2>
         <div className={SAFETY_BODY}>
           <p className={SAFETY_QUOTE}>{PARENTS_SAFETY.quote}</p>

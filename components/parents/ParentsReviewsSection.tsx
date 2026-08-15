@@ -2,8 +2,8 @@ import Image from "next/image";
 import { REVIEWS_PARENTS, MEDIA } from "@/lib/constants";
 import SwiperCarousel from "@/components/ui/SwiperCarousel";
 import {
-  SECTION_DARK,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_10,
   REVIEW_CARD,
   REVIEW_IMAGE,
@@ -15,8 +15,8 @@ import {
 
 export default function ParentsReviewsSection() {
   return (
-    <section className={SECTION_DARK}>
-      <div className={CONTAINER}>
+    <section className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <h2 className={SECTION_TITLE_MB_10}>Отзывы родителей</h2>
 
         <SwiperCarousel

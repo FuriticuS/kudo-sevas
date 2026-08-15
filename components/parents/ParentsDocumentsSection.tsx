@@ -1,7 +1,7 @@
 import { PARENT_DOCUMENTS, SCHEDULE, MAP, CONTACTS } from "@/lib/constants";
 import {
-  SECTION_LIGHT,
-  CONTAINER,
+  SECTION_CARD,
+  CARD_WRAP,
   SECTION_TITLE_MB_6,
   SUBHEADING_DOCS,
   LINK_TEL,
@@ -26,8 +26,8 @@ export default function ParentsDocumentsSection() {
   const kidsSchedule = SCHEDULE.filter((item) => !item.group.includes("16+"));
 
   return (
-    <section className={SECTION_LIGHT}>
-      <div className={CONTAINER}>
+    <section className={SECTION_CARD}>
+      <div className={CARD_WRAP}>
         <div className={TWO_COL_GRID}>
           <div>
             <h2 className={SECTION_TITLE_MB_6}>Документы для родителей</h2>
