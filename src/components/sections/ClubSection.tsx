@@ -8,7 +8,8 @@ import {
   IMG_COVER,
   TEXT_STACK,
   CLUB_WRAP,
-  SLIDE_4_3,
+  CAROUSEL_4_3,
+  SLIDE_IMAGE,
 } from "@/lib/styles";
 
 export default function ClubSection() {
@@ -28,8 +29,9 @@ export default function ClubSection() {
 
         <div>
           <SwiperCarousel
+            swiperClassName={CAROUSEL_4_3}
             slides={CLUB_SLIDES.map((slide) => (
-              <div key={slide.image} className={SLIDE_4_3}>
+              <div key={slide.image} className={SLIDE_IMAGE}>
                 <Image
                   src={slide.image}
                   alt={slide.alt}

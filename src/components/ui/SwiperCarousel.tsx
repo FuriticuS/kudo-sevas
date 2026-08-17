@@ -18,6 +18,8 @@ interface SwiperCarouselProps {
   autoplayDelay?: number;
   /** Зациклить слайдер */
   loop?: boolean;
+  /** Дополнительные классы для корневого Swiper (например, соотношение сторон) */
+  swiperClassName?: string;
 }
 
 export default function SwiperCarousel({
@@ -26,6 +28,7 @@ export default function SwiperCarousel({
   slidesPerView = 1,
   autoplayDelay = 5000,
   loop = true,
+  swiperClassName,
 }: SwiperCarouselProps) {
   return (
     <Swiper
@@ -43,7 +46,7 @@ export default function SwiperCarousel({
         768: { slidesPerView: Math.min(2, slidesPerView) },
         1024: { slidesPerView },
       }}
-      className={SWIPER_NAV}
+      className={`${SWIPER_NAV} ${swiperClassName ?? ""}`.trim()}
     >
       {slides.map((slide, i) => (
         <SwiperSlide key={i}>{slide}</SwiperSlide>

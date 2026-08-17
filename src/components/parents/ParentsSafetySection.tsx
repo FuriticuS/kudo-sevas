@@ -9,7 +9,8 @@ import {
   IMG_COVER,
   TEXT_STACK,
   CLUB_WRAP,
-  SLIDE_SQUARE,
+  CAROUSEL_SQUARE,
+  SLIDE_IMAGE,
   SAFETY_QUOTE,
   SAFETY_QUOTE_AUTHOR,
 } from "@/lib/styles";
@@ -31,8 +32,9 @@ export default function ParentsSafetySection() {
 
         <div>
           <SwiperCarousel
+            swiperClassName={CAROUSEL_SQUARE}
             slides={PROTECTION_SLIDES.map((slide) => (
-              <div key={slide.image} className={SLIDE_SQUARE}>
+              <div key={slide.image} className={SLIDE_IMAGE}>
                 <Image
                   src={slide.image}
                   alt={slide.alt}

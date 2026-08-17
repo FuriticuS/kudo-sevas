@@ -147,10 +147,10 @@ export const FOUNDER_WRAP =
   "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 md:grid-cols-[7fr_3fr] md:p-10";
 export const FOUNDER_TEXT = "flex flex-col justify-center";
 export const FOUNDER_QUOTE =
-  "text-4xl font-bold leading-relaxed text-dark";
+  "text-center text-[2rem] font-bold leading-relaxed text-dark md:text-left md:text-4xl";
 export const FOUNDER_DESC = `mt-6 ${BODY_TEXT}`;
 export const FOUNDER_NAME = "text-2xl font-bold text-dark";
-export const FOUNDER_IMAGE = "mx-auto h-auto w-full max-w-[400px] -mb-[105px]";
+export const FOUNDER_IMAGE = "mx-auto h-auto w-full max-w-[400px]";
 export const FOUNDER_ABOUT = "mt-12";
 export const FOUNDER_TITLE = `mt-8 ${SECTION_TITLE} text-dark`;
 
@@ -163,9 +163,10 @@ export const ABOUT_BODY = "max-w-3xl space-y-4";
 // Club
 // ============================================
 export const CLUB_WRAP =
-  "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 text-dark md:grid-cols-2 md:p-10";
-export const SLIDE_4_3 = "relative aspect-[4/3] overflow-hidden rounded-xl";
-export const SLIDE_SQUARE = "relative aspect-square overflow-hidden rounded-xl";
+  "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 text-dark md:grid-cols-2 md:p-10 [&>div]:min-w-0";
+export const CAROUSEL_4_3 = "aspect-[4/3]";
+export const CAROUSEL_SQUARE = "aspect-square";
+export const SLIDE_IMAGE = "relative h-full w-full overflow-hidden rounded-xl";
 
 // ============================================
 // Parents Hero
