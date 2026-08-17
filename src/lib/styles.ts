@@ -131,7 +131,7 @@ export const COPYRIGHT_LINK = `text-light ${LINK_HOVER}`;
 // ============================================
 export const HERO_SECTION = "relative flex min-h-screen items-center overflow-hidden";
 export const HERO_VIDEO = "absolute inset-0 h-full w-full object-cover";
-export const HERO_OVERLAY = "absolute inset-0 bg-[#1d1d1d]/50";
+export const HERO_OVERLAY = "absolute inset-0 bg-[#1d1d1d]/80";
 export const HERO_CONTENT =
   "relative z-10 flex min-h-screen w-full flex-col items-center justify-center px-4 py-24 text-center";
 export const HERO_TITLE =
@@ -165,20 +165,25 @@ export const ABOUT_BODY = "max-w-3xl space-y-4";
 export const CLUB_WRAP =
   "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 text-dark md:grid-cols-2 md:p-10";
 export const SLIDE_4_3 = "relative aspect-[4/3] overflow-hidden rounded-xl";
+export const SLIDE_SQUARE = "relative aspect-square overflow-hidden rounded-xl";
 
 // ============================================
 // Parents Hero
 // ============================================
 export const PARENTS_HERO_SECTION =
   "relative flex min-h-screen items-center overflow-hidden bg-dark";
+export const PARENTS_HERO_SLIDER = "absolute inset-0 z-0";
+export const PARENTS_HERO_SWIPER = "h-full w-full";
+export const PARENTS_HERO_SLIDE = "relative h-full w-full";
+export const PARENTS_HERO_OVERLAY = "absolute inset-0 z-10 bg-[#1d1d1d]/80";
 export const PARENTS_HERO_CONTAINER =
-  "mx-auto w-full max-w-[1440px] px-4 py-24 md:px-8";
+  "relative z-20 mx-auto flex w-full max-w-[1440px] flex-col items-center px-4 py-24 text-center md:px-8";
 export const PARENTS_HERO_TITLE =
   "max-w-3xl text-4xl font-extrabold uppercase leading-tight tracking-tight text-light md:text-6xl";
 export const PARENTS_HERO_SUBTITLE =
-  "mt-6 max-w-2xl text-xl font-bold text-light md:text-2xl";
-export const PARENTS_HERO_DESC = `mt-4 max-w-2xl ${BODY_TEXT}`;
-export const PARENTS_HERO_BUTTON = `mt-8 ${BUTTON_PRIMARY}`;
+  "mt-6 max-w-3xl text-xl font-bold text-light md:text-2xl";
+export const PARENTS_HERO_DESC = "mt-8 max-w-4xl text-base leading-relaxed text-light";
+export const PARENTS_HERO_BUTTON = `mt-16 ${BUTTON_PRIMARY}`;
 
 // ============================================
 // Parents Stats
@@ -214,7 +219,13 @@ export const BELTS_GRID = "grid gap-2 md:grid-cols-2";
 // ============================================
 export const DOCS_LABEL = "mb-4 font-bold";
 export const DOCS_LIST = "mb-8 space-y-2";
-export const DOCS_ITEM = "flex items-start gap-3";
+export const DOCS_ITEM = "flex items-center gap-3";
+export const DOCS_BULLET = "h-2 w-2 shrink-0 rounded-full bg-primary";
+export const DOCS_TEXT = "flex-1 text-base text-gray";
+export const DOCS_ICON_LINK =
+  "flex shrink-0 items-center gap-1.5 text-primary transition-opacity hover:opacity-75";
+export const DOCS_ICON = "h-4 w-4";
+export const DOCS_DOWNLOAD_TEXT = "text-sm font-bold uppercase tracking-wide";
 export const DOCS_CONTACT_LABEL = "mb-2 font-bold";
 export const DOCS_CONTACT_TEXT = "mb-8 text-base text-gray";
 

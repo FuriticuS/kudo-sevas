@@ -1,10 +1,15 @@
-import { PARENTS_SAFETY } from "@/lib/constants";
+import Image from "next/image";
+import { PARENTS_SAFETY, PROTECTION_SLIDES } from "@/lib/constants";
+import SwiperCarousel from "@/components/ui/SwiperCarousel";
 import {
   SECTION_CARD,
-  CARD_WRAP,
-  SECTION_TITLE_MB_8,
+  SECTION_TITLE_MB_6,
   BODY_TEXT,
-  SAFETY_BODY,
+  STATS_TEXT,
+  IMG_COVER,
+  TEXT_STACK,
+  CLUB_WRAP,
+  SLIDE_SQUARE,
   SAFETY_QUOTE,
   SAFETY_QUOTE_AUTHOR,
 } from "@/lib/styles";
@@ -12,13 +17,33 @@ import {
 export default function ParentsSafetySection() {
   return (
     <section className={SECTION_CARD}>
-      <div className={CARD_WRAP}>
-        <h2 className={SECTION_TITLE_MB_8}>{PARENTS_SAFETY.title}</h2>
-        <div className={SAFETY_BODY}>
-          <p className={SAFETY_QUOTE}>{PARENTS_SAFETY.quote}</p>
-          <p className={SAFETY_QUOTE_AUTHOR}>{PARENTS_SAFETY.quoteAuthor}</p>
-          <p className={BODY_TEXT}>{PARENTS_SAFETY.description}</p>
-          <p className={BODY_TEXT}>{PARENTS_SAFETY.gearNote}</p>
+      <div className={CLUB_WRAP}>
+        <div>
+          <h2 className={SECTION_TITLE_MB_6}>{PARENTS_SAFETY.title}</h2>
+          <div className={TEXT_STACK}>
+            <p className={STATS_TEXT}>{PARENTS_SAFETY.leadText}</p>
+            <p className={SAFETY_QUOTE}>{PARENTS_SAFETY.quote}</p>
+            <p className={SAFETY_QUOTE_AUTHOR}>{PARENTS_SAFETY.quoteAuthor}</p>
+            <p className={BODY_TEXT}>{PARENTS_SAFETY.description}</p>
+            <p className={BODY_TEXT}>{PARENTS_SAFETY.gearNote}</p>
+          </div>
+        </div>
+
+        <div>
+          <SwiperCarousel
+            slides={PROTECTION_SLIDES.map((slide) => (
+              <div key={slide.image} className={SLIDE_SQUARE}>
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className={IMG_COVER}
+                />
+              </div>
+            ))}
+            slidesPerView={1}
+          />
         </div>
       </div>
     </section>

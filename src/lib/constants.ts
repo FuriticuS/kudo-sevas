@@ -173,11 +173,21 @@ export const PARENTS_HERO = {
     "Кудо с юных лет помогает поверить в себя и раскрыть потенциал",
   description:
     "Соревновательный дух обязательно поможет ребенку в жизни, научит ставить цели и достигать их, преодолевать трудности, приучит к дисциплине внутренней и внешней",
-  statText: "На данный момент в России порядка 60% от всех занимающихся кудо — дети.",
 };
+
+// Слайды фонового слайдера в hero-блоке страницы родителей
+// (изображения из public/images/parentsandchildrens)
+export const PARENTS_HERO_SLIDES: SlideItem[] = Array.from(
+  { length: 17 },
+  (_, i) => ({
+    image: `/images/parentsandchildrens/${i + 1}.webp`,
+    alt: `Тренировки для родителей и детей — фото ${i + 1}`,
+  }),
+);
 
 export const PARENTS_SAFETY = {
   title: "Кудо и безопасность",
+  leadText: "На данный момент в России порядка 60% от всех занимающихся кудо — дети.",
   quote:
     "«Чтобы вырастить бойцов, которые не испытывают страха перед поединком, их не нужно травмировать».",
   quoteAuthor: "Адзума Такаши, основатель кудо, черный пояс IX дан",
@@ -186,6 +196,16 @@ export const PARENTS_SAFETY = {
   gearNote:
     "Дети тренируются только в специальных кирасах, одеваемых на корпус и шлеме с пластиковым забралом, что сводит риски получения травм практически к нулю.",
 };
+
+// Слайды защитной экипировки в блоке "Кудо и безопасность"
+// (изображения из public/images/protection)
+export const PROTECTION_SLIDES: SlideItem[] = Array.from(
+  { length: 4 },
+  (_, i) => ({
+    image: `/images/protection/${i + 1}.webp`,
+    alt: `Защитная экипировка кудо — фото ${i + 1}`,
+  }),
+);
 
 export const PARENTS_BENEFITS: Benefit[] = [
   { text: "наладить дисциплину" },
@@ -239,12 +259,22 @@ export const BELTS: Belt[] = [
 // ============================================
 
 export const PARENT_DOCUMENTS: ParentDocument[] = [
-  { name: "Бланк согласия родителей на занятия ребёнком кудо" },
+  {
+    name: "Бланк согласия родителей на занятия ребёнком кудо",
+    href: "/docs/notarialnoe-soglasie-roditelej-na-zanyatiya.doc",
+  },
   {
     name: "Требования допуска к участникам учебно-тренировочных, соревновательных и аттестационных мероприятий",
+    href: "/docs/trebovanya_sorevnovaniy.pdf",
   },
-  { name: "Правила ухода за шлемом Neo Head Gear" },
-  { name: "Анкета для занятий кудо (до 18 лет)" },
+  {
+    name: "Правила ухода за шлемом Neo Head Gear",
+    href: "/docs/pravila-uhoda-za-shlemom-neo-head-gear.doc",
+  },
+  {
+    name: "Анкета для занятий кудо (до 18 лет)",
+    href: "/docs/anketa-dlya-zanyatij-kudo-do-18-let.doc",
+  },
 ];
 
 // ============================================

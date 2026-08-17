@@ -8,15 +8,18 @@ import {
   SCHEDULE_ROW,
   MAP_WRAP,
   MAP_IFRAME,
-  BULLET,
   TWO_COL_GRID,
   LIST_STACK,
   DEFINITION_TERM,
   DEFINITION_DESC,
-  LIST_TEXT,
   DOCS_LABEL,
   DOCS_LIST,
   DOCS_ITEM,
+  DOCS_BULLET,
+  DOCS_TEXT,
+  DOCS_ICON_LINK,
+  DOCS_ICON,
+  DOCS_DOWNLOAD_TEXT,
   DOCS_CONTACT_LABEL,
   DOCS_CONTACT_TEXT,
 } from "@/lib/styles";
@@ -38,8 +41,33 @@ export default function ParentsDocumentsSection() {
             <ul className={DOCS_LIST}>
               {PARENT_DOCUMENTS.map((doc) => (
                 <li key={doc.name} className={DOCS_ITEM}>
-                  <span className={BULLET} />
-                  <span className={LIST_TEXT}>{doc.name}</span>
+                  <span className={DOCS_BULLET} />
+                  <span className={DOCS_TEXT}>{doc.name}</span>
+                  {doc.href && (
+                    <a
+                      href={doc.href}
+                      download
+                      className={DOCS_ICON_LINK}
+                      aria-label={`Скачать: ${doc.name}`}
+                    >
+                      <svg
+                        className={DOCS_ICON}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                      </svg>
+                      <span className={DOCS_DOWNLOAD_TEXT}>Скачать</span>
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

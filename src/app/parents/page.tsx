@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/metadata";
 import ParentsHeroSection from "@/components/parents/ParentsHeroSection";
-import ParentsStatsSection from "@/components/parents/ParentsStatsSection";
 import ParentsSafetySection from "@/components/parents/ParentsSafetySection";
 import ParentsUpbringingSection from "@/components/parents/ParentsUpbringingSection";
 import ParentsDevelopmentSection from "@/components/parents/ParentsDevelopmentSection";
@@ -19,7 +18,6 @@ export default function ParentsPage() {
   return (
     <>
       <ParentsHeroSection />
-      <ParentsStatsSection />
       <ParentsSafetySection />
       <ParentsUpbringingSection />
       <ParentsDevelopmentSection />

@@ -22,10 +22,26 @@
 ```bash
 npm install       # установка зависимостей
 npm run dev       # dev-сервер (http://localhost:3000)
+npm run dev:clean # остановить старые dev-серверы, очистить кэш .next и запустить dev-сервер
 npm run build     # production-сборка
 npm run start     # запуск собранного приложения
 npm run lint      # проверка линтером
 ```
+
+### Перезапуск dev-сервера (`dev:clean`)
+
+Иногда после правок стилей изменения «не применяются». Причина — **устаревшие dev-серверы**, запущенные до переноса исходников в `src/`: они продолжают следить за старыми путями и не видят правки в `src/lib/styles.ts`, а кэш `.next` держит старый CSS.
+
+`npm run dev:clean` решает это одним вызовом:
+1. останавливает dev-серверы, слушающие порты 3000–3010;
+2. удаляет кэш `.next`;
+3. запускает `next dev` заново.
+
+```bash
+npm run dev:clean
+```
+
+> 💡 Если Tailwind-стиль из `src/lib/styles.ts` перестал обновляться — сначала `npm run dev:clean`, а не правки кода.
 
 ## Страницы
 
@@ -37,15 +53,15 @@ npm run lint      # проверка линтером
 
 ## Система стилей
 
-Все `className` вынесены в `lib/styles.ts` как именованные константы. В компонентах подставляются **только имена переменных** — инлайновых Tailwind-строк в JSX нет.
+Все `className` вынесены в `src/lib/styles.ts` как именованные константы. В компонентах подставляются **только имена переменных** — инлайновых Tailwind-строк в JSX нет.
 
 Правила:
-- Новый стиль сначала добавляется в `lib/styles.ts`, а не хардкодится в JSX.
+- Новый стиль сначала добавляется в `src/lib/styles.ts`, а не хардкодится в JSX.
 - Константы группируются по секциям с префиксами (`HERO_*`, `FOOTER_*`, `PARENTS_*`, …).
 - Составные стили (отступ + базовый класс) собираются через шаблонные строки в `styles.ts`, чтобы в компоненте был один `className`.
-- Исключение: динамические имена шрифтов `next/font` в `app/layout.tsx` (`${manrope.variable} ${roboto.variable}`).
+- Исключение: динамические имена шрифтов `next/font` в `src/app/layout.tsx` (`${manrope.variable} ${roboto.variable}`).
 
-> ⚠️ Tailwind сканирует `lib/**` в `tailwind.config.ts` — не удаляйте этот путь из `content`, иначе классы из `styles.ts` перестанут генерироваться.
+> ⚠️ Tailwind сканирует `src/lib/**` в `tailwind.config.ts` — не удаляйте этот путь из `content`, иначе классы из `styles.ts` перестанут генерироваться.
 
 ## Цвета и шрифты
 
@@ -56,11 +72,11 @@ npm run lint      # проверка линтером
 - `primary: #E60023`
 - `gray: #5F646D`
 
-Шрифты подключаются локально через `next/font/local` (Manrope 400/800, Roboto 400/700) в `app/layout.tsx`.
+Шрифты подключаются локально через `next/font/local` (Manrope 400/800, Roboto 400/700) в `src/app/layout.tsx`.
 
 ## SEO
 
-- Метаданные генерируются через `buildMetadata()` в `lib/metadata.ts`.
-- `app/sitemap.ts` — карта сайта.
-- `app/robots.ts` — robots.txt.
-- `components/JsonLd.tsx` — структурированные данные Schema.org (организация).
+- Метаданные генерируются через `buildMetadata()` в `src/lib/metadata.ts`.
+- `src/app/sitemap.ts` — карта сайта.
+- `src/app/robots.ts` — robots.txt.
+- `src/components/ui/JsonLd.tsx` — структурированные данные Schema.org (организация).
