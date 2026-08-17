@@ -230,6 +230,17 @@ export const DOCS_CONTACT_LABEL = "mb-2 font-bold";
 export const DOCS_CONTACT_TEXT = "mb-8 text-base text-gray";
 
 // ============================================
+// Equipment Center
+// ============================================
+export const EQUIPMENT_WRAP = "grid items-center gap-10 md:grid-cols-2";
+export const EQUIPMENT_LEFT = "flex flex-col";
+export const EQUIPMENT_RIGHT = "flex items-center justify-center";
+export const EQUIPMENT_LOGO = "h-auto w-full max-w-[300px]";
+export const EQUIPMENT_TEXT =
+  "mb-8 max-w-2xl text-base leading-relaxed text-gray";
+export const EQUIPMENT_BUTTON = `${BUTTON_PRIMARY}`;
+
+// ============================================
 // ScrollToTop
 // ============================================
 export const SCROLL_TO_TOP =

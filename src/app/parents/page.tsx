@@ -5,7 +5,7 @@ import ParentsSafetySection from "@/components/parents/ParentsSafetySection";
 import ParentsUpbringingSection from "@/components/parents/ParentsUpbringingSection";
 import ParentsDevelopmentSection from "@/components/parents/ParentsDevelopmentSection";
 import ParentsDocumentsSection from "@/components/parents/ParentsDocumentsSection";
-import ParentsReviewsSection from "@/components/parents/ParentsReviewsSection";
+import EquipmentCenterSection from "@/components/parents/EquipmentCenterSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "Для родителей",
@@ -22,7 +22,7 @@ export default function ParentsPage() {
       <ParentsUpbringingSection />
       <ParentsDevelopmentSection />
       <ParentsDocumentsSection />
-      <ParentsReviewsSection />
+      <EquipmentCenterSection />
     </>
   );
 }
