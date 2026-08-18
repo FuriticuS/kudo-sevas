@@ -5,6 +5,7 @@ import {
   SECTION_CARD,
   SECTION_TITLE_MB_6,
   BODY_TEXT,
+  BODY_TEXT_DARK,
   IMG_COVER,
   TEXT_STACK,
   CLUB_WRAP,
@@ -20,7 +21,7 @@ export default function ClubSection() {
           <h2 className={SECTION_TITLE_MB_6}>Клуб Доблесть</h2>
           <div className={TEXT_STACK}>
             {CLUB_INFO.map((paragraph, i) => (
-              <p key={i} className={BODY_TEXT}>
+              <p key={i} className={i === 1 ? BODY_TEXT_DARK : BODY_TEXT}>
                 {paragraph}
               </p>
             ))}

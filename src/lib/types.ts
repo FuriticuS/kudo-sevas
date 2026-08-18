@@ -95,3 +95,17 @@ export interface MapData {
   /** Название места */
   placeName: string;
 }
+
+/** Фото в галерее */
+export interface GalleryImage {
+  src: string; // путь к .webp
+  alt: string;
+}
+
+/** Альбом галереи */
+export interface GalleryAlbum {
+  title: string;
+  /** slug папки с фото */
+  slug: string;
+  images: GalleryImage[];
+}

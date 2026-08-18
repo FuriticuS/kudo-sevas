@@ -2,9 +2,8 @@
 
 import type { ReactNode } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { SWIPER_NAV } from "@/lib/styles";
 
@@ -32,14 +31,13 @@ export default function SwiperCarousel({
 }: SwiperCarouselProps) {
   return (
     <Swiper
-      modules={[Autoplay, Pagination, Navigation]}
+      modules={[Autoplay, Navigation]}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
       loop={loop}
       autoplay={
         autoplayDelay > 0 ? { delay: autoplayDelay, disableOnInteraction: false } : false
       }
-      pagination={{ clickable: true }}
       navigation
       breakpoints={{
         0: { slidesPerView: 1 },

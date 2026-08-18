@@ -115,8 +115,8 @@ export default function Footer() {
               <Image
                 src={FOOTER.federation.logo}
                 alt={FOOTER.federation.name}
-                width={120}
-                height={40}
+                width={0}
+                height={0}
                 className={FED_LOGO}
               />
             </a>

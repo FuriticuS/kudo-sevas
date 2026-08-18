@@ -22,6 +22,7 @@ export const DARK_WRAP = "mx-auto max-w-[1440px]";
 export const SECTION_TITLE =
   "text-3xl font-extrabold uppercase tracking-tight md:text-4xl";
 export const BODY_TEXT = "text-base leading-relaxed text-gray";
+export const BODY_TEXT_DARK = "text-base leading-relaxed text-dark";
 export const SUBHEADING = "text-2xl font-extrabold uppercase tracking-tight";
 
 // --- Заголовки секций с отступами ---
@@ -67,12 +68,26 @@ export const MAP_IFRAME = "h-full min-h-[400px] w-full border-0";
 export const REVIEW_CARD =
   "grid h-full gap-6 rounded-xl border border-black/10 bg-dark p-6 md:grid-cols-[240px_1fr] md:p-8";
 export const REVIEW_CARD_ON_DARK =
-  "grid h-full gap-6 rounded-xl border border-white/10 bg-dark p-6 md:grid-cols-[240px_1fr] md:p-8";
+  "grid h-[520px] cursor-pointer gap-6 overflow-hidden rounded-xl border border-white/10 bg-dark p-6 transition-colors hover:border-primary/50 md:h-[320px] md:grid-cols-[240px_1fr] md:p-8";
 export const REVIEW_IMAGE =
   "relative h-48 w-full overflow-hidden rounded-lg md:h-full md:min-h-[240px]";
 export const REVIEW_TEXT_WRAP = "flex flex-col justify-center";
-export const REVIEW_TEXT = "text-base leading-relaxed text-light";
+export const REVIEW_TEXT =
+  "line-clamp-6 text-base leading-relaxed text-light md:line-clamp-4";
 export const REVIEW_AUTHOR = "mt-4 font-bold text-primary";
+export const REVIEW_READ_MORE =
+  "mt-3 text-sm font-bold uppercase tracking-wide text-primary";
+
+// --- Модальное окно отзыва (полный текст) ---
+export const REVIEW_MODAL_OVERLAY =
+  "fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4";
+export const REVIEW_MODAL_CARD =
+  "relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-xl border border-white/10 bg-dark p-8 text-light";
+export const REVIEW_MODAL_TEXT = "text-base leading-relaxed text-light md:text-lg";
+export const REVIEW_MODAL_AUTHOR = "mt-6 font-bold text-primary";
+export const REVIEW_MODAL_CLOSE =
+  "absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-light transition-colors hover:bg-white/20";
+export const REVIEW_MODAL_CLOSE_ICON = "h-6 w-6";
 
 // --- Расписание ---
 export const SCHEDULE_ROW = "flex flex-wrap items-baseline gap-x-3";
@@ -107,22 +122,22 @@ export const MOBILE_NAV_LIST = "flex flex-col gap-1 px-4 py-4";
 // Footer
 // ============================================
 export const FOOTER_CONTAINER = "mx-auto max-w-[1440px] px-4 py-12 md:px-8";
-export const FOOTER_GRID = "grid gap-10 md:grid-cols-2 lg:grid-cols-3";
-export const FOOTER_NAV_COL = "flex flex-col gap-6";
+export const FOOTER_GRID = "grid gap-10 text-center md:grid-cols-2 md:text-left lg:grid-cols-3";
+export const FOOTER_NAV_COL = "flex flex-col items-center gap-6 md:items-start";
 export const LOGO_XS = "h-12 w-12 object-contain";
-export const FOOTER_NAV_LIST = "flex flex-col gap-2";
-export const FOOTER_CONTACTS_COL = "flex flex-col gap-8";
+export const FOOTER_NAV_LIST = "flex flex-col items-center gap-2 md:items-start";
+export const FOOTER_CONTACTS_COL = "flex flex-col items-center gap-8 md:items-start";
 export const FOOTER_LABEL = "mb-3 text-sm text-gray";
-export const SOCIAL_ROW = "flex items-center gap-3";
+export const SOCIAL_ROW = "flex items-center justify-center gap-3 md:justify-start";
 export const SOCIAL_ICON =
   "flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-primary";
 export const SOCIAL_ICON_SVG = "h-5 w-5 fill-light";
-export const FOOTER_FED_COL = "flex flex-col gap-3";
+export const FOOTER_FED_COL = "flex flex-col items-center gap-3 md:items-start";
 export const FED_LINK = "inline-block";
 export const FED_LOGO = "h-10 w-auto object-contain";
 export const FED_NAME = "text-sm font-bold text-light";
 export const FED_ADDRESS = "max-w-xs text-xs text-gray";
-export const FOOTER_COPYRIGHT_WRAP = "mt-12 border-t border-white/10 pt-6";
+export const FOOTER_COPYRIGHT_WRAP = "mt-12 border-t border-white/10 pt-6 text-center";
 export const COPYRIGHT_TEXT = "text-xs text-gray";
 export const COPYRIGHT_LINK = `text-light ${LINK_HOVER}`;
 
@@ -254,9 +269,29 @@ export const SCROLL_TO_TOP_ICON = "h-6 w-6";
 // SwiperCarousel
 // ============================================
 export const SWIPER_NAV =
-  "[&_.swiper-pagination-bullet]:bg-dark [&_.swiper-pagination-bullet-active]:bg-primary [&_.swiper-button-prev]:text-primary [&_.swiper-button-next]:text-primary";
+  "[&_.swiper-button-prev]:text-primary [&_.swiper-button-next]:text-primary";
 
 // ============================================
 // Gallery
 // ============================================
-export const GALLERY_SECTION = "flex min-h-screen items-center justify-center bg-dark";
+export const GALLERY_SECTION =
+  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 pb-20 pt-28 md:px-8 md:pt-32";
+export const GALLERY_CONTAINER = "mx-auto max-w-[1440px]";
+export const GALLERY_GRID = "grid gap-8 md:grid-cols-2";
+export const GALLERY_CARD = "flex flex-col overflow-hidden rounded bg-light text-dark";
+export const GALLERY_ALBUM_TITLE =
+  "px-6 pt-6 text-xl font-extrabold uppercase tracking-tight md:text-2xl";
+export const GALLERY_SLIDER_WRAP = "p-6";
+export const GALLERY_CAROUSEL = "aspect-[4/3]";
+export const GALLERY_SLIDE = "relative block h-full w-full overflow-hidden";
+
+// --- Лайтбокс (полноэкранный просмотр) ---
+export const LIGHTBOX_OVERLAY = "fixed inset-0 z-[100] bg-black/95";
+export const LIGHTBOX_BODY = "h-full w-full";
+export const LIGHTBOX_SWIPER =
+  "h-full w-full [&_.swiper-button-prev]:text-light [&_.swiper-button-next]:text-light";
+export const LIGHTBOX_CLOSE =
+  "absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-light transition-colors hover:bg-white/20";
+export const LIGHTBOX_CLOSE_ICON = "h-6 w-6";
+export const LIGHTBOX_SLIDE = "relative h-full w-full";
+export const LIGHTBOX_IMAGE = "object-contain";
