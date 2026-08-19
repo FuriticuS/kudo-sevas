@@ -14,8 +14,8 @@ import type {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Клуб ДОБЛЕСТЬ", href: "/#club" },
-  { label: "Для родителей", href: "/parents" },
-  { label: "Галерея", href: "/gallery" },
+  { label: "Для родителей", href: "/parents/" },
+  { label: "Галерея", href: "/gallery/" },
   { label: "Отзывы", href: "/#reviews" },
   { label: "Контакты", href: "/#contacts" },
   { label: "KUDO Россия", href: "https://kudo.ru/", external: true },

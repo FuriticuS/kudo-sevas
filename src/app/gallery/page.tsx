@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Галерея",
   description:
     "Фотографии с тренировок и соревнований спортивного клуба KUDO Севастополь.",
-  path: "/gallery",
+  path: "/gallery/",
 });
 
 export default function GalleryPage() {

@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Для родителей",
   description:
     "Кудо для детей в Севастополе: безопасность, воспитание, система поясов, расписание и документы для родителей.",
-  path: "/parents",
+  path: "/parents/",
 });
 
 export default function ParentsPage() {
