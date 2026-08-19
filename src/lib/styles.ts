@@ -295,3 +295,17 @@ export const LIGHTBOX_CLOSE =
 export const LIGHTBOX_CLOSE_ICON = "h-6 w-6";
 export const LIGHTBOX_SLIDE = "relative h-full w-full";
 export const LIGHTBOX_IMAGE = "object-contain";
+
+// ============================================
+// 404 (not-found)
+// ============================================
+export const NOT_FOUND_SECTION =
+  "flex min-h-screen items-center justify-center bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 py-24 md:px-8";
+export const NOT_FOUND_WRAP =
+  "mx-auto flex max-w-[1440px] flex-col items-center text-center text-light";
+export const NOT_FOUND_CODE =
+  "text-[clamp(6rem,20vw,12rem)] font-extrabold uppercase leading-none tracking-tight text-primary";
+export const NOT_FOUND_TITLE =
+  "mt-4 text-3xl font-extrabold uppercase tracking-tight md:text-4xl";
+export const NOT_FOUND_TEXT = "mt-6 max-w-xl text-base leading-relaxed text-gray";
+export const NOT_FOUND_BUTTON = `mt-10 ${BUTTON_PRIMARY}`;

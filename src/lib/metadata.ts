@@ -14,6 +14,8 @@ interface BuildMetadataOptions {
   path?: string;
   /** OG-изображение (по умолчанию — логотип) */
   ogImage?: string;
+  /** Если true — title без суффикса-шаблона (для главной страницы) */
+  absolute?: boolean;
 }
 
 /**
@@ -25,6 +27,7 @@ export function buildMetadata({
   description = SITE.defaultDescription,
   path = "/",
   ogImage = SITE.defaultOgImage,
+  absolute = false,
 }: BuildMetadataOptions): Metadata {
   const url = `${SITE.url}${path}`;
   const image = ogImage.startsWith("http")
@@ -32,7 +35,7 @@ export function buildMetadata({
     : `${SITE.url}${ogImage}`;
 
   return {
-    title,
+    title: absolute ? { absolute: title } : title,
     description,
     alternates: {
       canonical: url,

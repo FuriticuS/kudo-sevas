@@ -320,10 +320,6 @@ export const MEDIA = {
   video: "/video/kudo-video-bg.mp4",
   poster: "/video/poster.webp",
   logo: "/images/logo/doblest.webp",
-  headerBg: "/images/header-bg/bg.webp",
-  brushRed: "/images/lines/brush-red.webp",
-  polaroid: "/images/lines/polaroid.webp",
-  defBg: "/images/def-bg.webp",
   reviewImages: [
     "/images/reviews/review-1.webp",
     "/images/reviews/review-2.webp",
