@@ -109,3 +109,10 @@ export interface GalleryAlbum {
   slug: string;
   images: GalleryImage[];
 }
+
+/** Видео в галерее */
+export interface GalleryVideo {
+  title: string;
+  src: string; // путь к .mp4
+  poster: string; // путь к кадру-превью
+}

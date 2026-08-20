@@ -101,14 +101,6 @@ export const CLUB_INFO: string[] = [
   "Также, команда СК «Доблесть» регулярно успешно принимает участие в турнирах других видов единоборств, таких как армейский рукопашный бой, бразильское джиу-джицу, тайский бокс.",
 ];
 
-export const CLUB_SLIDES: SlideItem[] = [
-  { image: "/images/parents/slide-1.webp", alt: "Тренировка клуба Доблесть — фото 1" },
-  { image: "/images/parents/slide-2.webp", alt: "Тренировка клуба Доблесть — фото 2" },
-  { image: "/images/parents/slide-3.webp", alt: "Тренировка клуба Доблесть — фото 3" },
-  { image: "/images/parents/slide-4.webp", alt: "Тренировка клуба Доблесть — фото 4" },
-  { image: "/images/parents/slide-5.webp", alt: "Тренировка клуба Доблесть — фото 5" },
-];
-
 // ============================================
 // Карта
 // ============================================
@@ -319,6 +311,8 @@ export const FOOTER = {
 export const MEDIA = {
   video: "/video/kudo-video-bg.mp4",
   poster: "/video/poster.webp",
+  clubVideo: "/video/kudo-doblest.mp4",
+  clubPoster: "/video/club-poster.webp",
   logo: "/images/logo/doblest.webp",
   reviewImages: [
     "/images/reviews/review-1.webp",

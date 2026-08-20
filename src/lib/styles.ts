@@ -13,7 +13,7 @@ export const CONTAINER_SM = "mx-auto max-w-[1440px] px-4 py-16 md:px-8";
 
 // --- Общий дизайн секции: тёмный фон + красная кисть + белая карточка ---
 export const SECTION_CARD =
-  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 py-20 md:px-8";
+  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-center bg-no-repeat px-4 py-20 md:px-8";
 export const CARD_WRAP =
   "mx-auto max-w-[1440px] rounded bg-light p-6 text-dark md:p-10";
 export const DARK_WRAP = "mx-auto max-w-[1440px]";
@@ -157,7 +157,7 @@ export const HERO_BUTTON = `mt-24 ${BUTTON_PRIMARY}`;
 // Founder
 // ============================================
 export const FOUNDER_SECTION =
-  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 py-20 md:px-8";
+  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-center bg-no-repeat px-4 py-20 md:px-8";
 export const FOUNDER_WRAP =
   "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 md:grid-cols-[7fr_3fr] md:p-10";
 export const FOUNDER_TEXT = "flex flex-col justify-center";
@@ -179,7 +179,9 @@ export const ABOUT_BODY = "max-w-3xl space-y-4";
 // ============================================
 export const CLUB_WRAP =
   "mx-auto grid max-w-[1440px] items-center gap-10 rounded bg-light p-6 text-dark md:grid-cols-2 md:p-10 [&>div]:min-w-0";
-export const CAROUSEL_4_3 = "aspect-[4/3]";
+export const CLUB_VIDEO_WRAP = "overflow-hidden rounded-xl bg-black shadow-lg";
+export const CLUB_VIDEO = "block h-auto w-full";
+export const CLUB_HIGHLIGHT = "font-bold text-dark";
 export const CAROUSEL_SQUARE = "aspect-square";
 export const SLIDE_IMAGE = "relative h-full w-full overflow-hidden rounded-xl";
 
@@ -275,9 +277,12 @@ export const SWIPER_NAV =
 // Gallery
 // ============================================
 export const GALLERY_SECTION =
-  "bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 pb-20 pt-28 md:px-8 md:pt-32";
+  "bg-dark bg-[url('/images/lines/brush-red-tile.webp')] bg-center bg-repeat-y px-4 pb-20 pt-28 md:px-8 md:pt-32";
 export const GALLERY_CONTAINER = "mx-auto max-w-[1440px]";
 export const GALLERY_GRID = "grid gap-8 md:grid-cols-2";
+export const GALLERY_SECTION_TITLE = `${SECTION_TITLE} mb-8 text-light`;
+export const GALLERY_SECTION_TITLE_MT = `mt-12 ${GALLERY_SECTION_TITLE}`;
+export const GALLERY_VIDEO = "block h-auto w-full";
 export const GALLERY_CARD = "flex flex-col overflow-hidden rounded bg-light text-dark";
 export const GALLERY_ALBUM_TITLE =
   "px-6 pt-6 text-xl font-extrabold uppercase tracking-tight md:text-2xl";
@@ -300,7 +305,7 @@ export const LIGHTBOX_IMAGE = "object-contain";
 // 404 (not-found)
 // ============================================
 export const NOT_FOUND_SECTION =
-  "flex min-h-screen items-center justify-center bg-dark bg-[url('/images/lines/brush-red.webp')] bg-top bg-no-repeat px-4 py-24 md:px-8";
+  "flex min-h-screen items-center justify-center bg-dark bg-[url('/images/lines/brush-red.webp')] bg-center bg-no-repeat px-4 py-24 md:px-8";
 export const NOT_FOUND_WRAP =
   "mx-auto flex max-w-[1440px] flex-col items-center text-center text-light";
 export const NOT_FOUND_CODE =

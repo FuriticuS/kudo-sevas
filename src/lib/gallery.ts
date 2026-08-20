@@ -3,7 +3,15 @@
 // Все classNames — в src/lib/styles.ts.
 // ============================================
 
-import type { GalleryAlbum } from "@/lib/types";
+import type { GalleryAlbum, GalleryVideo } from "@/lib/types";
+
+export const GALLERY_VIDEOS: GalleryVideo[] = [
+  {
+    title: "Кудо клуб Доблесть",
+    src: "/video/kudo-doblest.mp4",
+    poster: "/video/club-poster.webp",
+  },
+];
 
 export const GALLERY_ALBUMS: GalleryAlbum[] = [
   {

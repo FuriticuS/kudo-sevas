@@ -1,16 +1,14 @@
-import Image from "next/image";
-import { CLUB_INFO, CLUB_SLIDES } from "@/lib/constants";
-import SwiperCarousel from "@/components/ui/SwiperCarousel";
+import { CLUB_INFO, MEDIA } from "@/lib/constants";
 import {
   SECTION_CARD,
   SECTION_TITLE_MB_6,
   BODY_TEXT,
   BODY_TEXT_DARK,
-  IMG_COVER,
   TEXT_STACK,
   CLUB_WRAP,
-  CAROUSEL_4_3,
-  SLIDE_IMAGE,
+  CLUB_VIDEO_WRAP,
+  CLUB_VIDEO,
+  CLUB_HIGHLIGHT,
 } from "@/lib/styles";
 
 export default function ClubSection() {
@@ -20,30 +18,38 @@ export default function ClubSection() {
         <div>
           <h2 className={SECTION_TITLE_MB_6}>Клуб Доблесть</h2>
           <div className={TEXT_STACK}>
-            {CLUB_INFO.map((paragraph, i) => (
-              <p key={i} className={i === 1 ? BODY_TEXT_DARK : BODY_TEXT}>
-                {paragraph}
-              </p>
-            ))}
+            {CLUB_INFO.map((paragraph, i) => {
+              if (i === 1) {
+                const splitIndex = paragraph.indexOf("Исаевич");
+                return (
+                  <p key={i} className={BODY_TEXT_DARK}>
+                    {paragraph.slice(0, splitIndex)}
+                    <span className={CLUB_HIGHLIGHT}>
+                      {paragraph.slice(splitIndex)}
+                    </span>
+                  </p>
+                );
+              }
+              return (
+                <p key={i} className={BODY_TEXT}>
+                  {paragraph}
+                </p>
+              );
+            })}
           </div>
         </div>
 
-        <div>
-          <SwiperCarousel
-            swiperClassName={CAROUSEL_4_3}
-            slides={CLUB_SLIDES.map((slide) => (
-              <div key={slide.image} className={SLIDE_IMAGE}>
-                <Image
-                  src={slide.image}
-                  alt={slide.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className={IMG_COVER}
-                />
-              </div>
-            ))}
-            slidesPerView={1}
-          />
+        <div className={CLUB_VIDEO_WRAP}>
+          <video
+            className={CLUB_VIDEO}
+            controls
+            playsInline
+            preload="metadata"
+            poster={MEDIA.clubPoster}
+          >
+            <source src={MEDIA.clubVideo} type="video/mp4" />
+            Ваш браузер не поддерживает видео.
+          </video>
         </div>
       </div>
     </section>
