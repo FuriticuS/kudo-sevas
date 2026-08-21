@@ -51,6 +51,7 @@ export const NAV_LINK_MOBILE =
 
 // --- Изображения ---
 export const IMG_COVER = "object-cover";
+export const IMG_CONTAIN = "object-contain";
 
 // --- Общие текстовые/списочные утилиты ---
 export const TEXT_STACK = "space-y-4";
@@ -173,6 +174,52 @@ export const FOUNDER_TITLE = `mt-8 ${SECTION_TITLE} text-dark`;
 // About Kudo
 // ============================================
 export const ABOUT_BODY = "max-w-3xl space-y-4";
+
+// ============================================
+// Coach
+// ============================================
+export const COACH_GRID = "grid items-start gap-10 md:grid-cols-[minmax(0,1fr)_auto]";
+export const COACH_NAME =
+  "text-2xl font-extrabold uppercase tracking-tight text-dark md:text-3xl";
+export const COACH_RANK = "mt-3 text-lg font-bold text-primary";
+export const COACH_ROLE = "mt-1 text-base text-gray";
+export const COACH_LEAD = "mt-6 max-w-xl text-base leading-relaxed text-gray";
+export const COACH_IMAGE_WRAP = "flex items-start justify-center";
+export const COACH_IMAGE = "h-auto w-full max-w-[425px]";
+export const COACH_PANEL =
+  "flex flex-col justify-center gap-4 rounded-xl bg-dark p-8";
+export const COACH_PANEL_LABEL = "text-sm uppercase tracking-wide text-gray";
+export const COACH_PANEL_PHONE =
+  "text-2xl font-bold text-light transition-colors hover:text-primary";
+export const COACH_BUTTON = BUTTON_PRIMARY;
+
+// --- Интервью тренера (кнопка + модальное окно) ---
+export const COACH_INTERVIEW_LINK =
+  "mx-auto mt-12 block w-fit rounded bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-light transition-opacity hover:opacity-85 md:mx-0";
+export const COACH_INTERVIEW_INLINE_LINK =
+  "text-primary underline underline-offset-2 transition-opacity hover:opacity-75";
+export const COACH_MODAL_OVERLAY =
+  "fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4";
+export const COACH_MODAL_CARD =
+  "relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-xl border border-white/10 bg-dark p-8 text-light";
+export const COACH_MODAL_TITLE =
+  "mb-6 text-2xl font-extrabold uppercase tracking-tight";
+export const COACH_MODAL_CLOSE =
+  "absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-light transition-colors hover:bg-white/20";
+export const COACH_MODAL_CLOSE_ICON = "h-6 w-6";
+export const COACH_QA_ITEM = "mb-6";
+export const COACH_QA_QUESTION = "mb-2 text-lg font-bold text-primary";
+export const COACH_QA_ANSWER = "space-y-3 text-base leading-relaxed text-light";
+
+// ============================================
+// Coaches (страница «Тренерский состав»)
+// ============================================
+export const COACHES_CARD = "rounded bg-light p-6 text-dark md:p-10";
+export const COACHES_LAYOUT =
+  "grid items-start gap-10 md:grid-cols-2 [&>div]:min-w-0";
+export const COACHES_SLIDER_WRAP = "w-full";
+export const COACHES_CAROUSEL = "aspect-[4/3] w-full";
+export const COACHES_SLIDE = "relative block h-full w-full overflow-hidden rounded-xl";
 
 // ============================================
 // Club

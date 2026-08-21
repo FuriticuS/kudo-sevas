@@ -28,7 +28,7 @@ export default function ParentsHeroSection() {
           modules={[Autoplay, EffectFade]}
           effect="fade"
           fadeEffect={{ crossFade: true }}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           loop
           speed={1200}
           className={PARENTS_HERO_SWIPER}

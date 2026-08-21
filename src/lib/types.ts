@@ -88,6 +88,22 @@ export interface FounderInfo {
   image: string;
 }
 
+/** Информация о тренере (блок «Тренер» на главной) */
+export interface CoachInfo {
+  name: string;
+  rank: string;
+  description: string;
+  lead: string;
+  image: string;
+}
+
+/** Вопрос-ответ в интервью тренера */
+export interface InterviewQA {
+  question: string;
+  /** Ответ, поддерживает markdown-ссылки [текст](url) и абзацы через пустую строку */
+  answer: string;
+}
+
 /** Yandex Maps */
 export interface MapData {
   /** URL для <iframe> */

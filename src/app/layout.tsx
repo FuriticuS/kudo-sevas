@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     template: SITE.titleTemplate,
   },
   description: SITE.defaultDescription,
+  keywords: SITE.keywords,
 };
 
 export default function RootLayout({
@@ -57,7 +58,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className={`${manrope.variable} ${roboto.variable}`}>
+    <html
+      lang="ru"
+      data-scroll-behavior="smooth"
+      className={`${manrope.variable} ${roboto.variable}`}
+    >
       <body>
         <JsonLd json={organizationJsonLd} />
         <Header />

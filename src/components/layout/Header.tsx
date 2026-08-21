@@ -34,7 +34,6 @@ export default function Header() {
             alt="KUDO Севастополь"
             width={64}
             height={64}
-            priority
             className={LOGO_SM}
           />
         </Link>

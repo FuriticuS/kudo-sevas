@@ -10,7 +10,7 @@ import EquipmentCenterSection from "@/components/parents/EquipmentCenterSection"
 export const metadata: Metadata = buildMetadata({
   title: "Для родителей",
   description:
-    "Кудо для детей в Севастополе: безопасность, воспитание, система поясов, расписание и документы для родителей.",
+    "Кудо для детей в Севастополе: безопасные тренировки, воспитание дисциплины и уверенности в себе, спортивная секция для мальчиков и девочек. Расписание и документы для родителей.",
   path: "/parents/",
 });
 

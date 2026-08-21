@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import GalleryLightbox from "@/components/gallery/GalleryLightbox";
@@ -31,8 +31,10 @@ export default function GalleryAlbumSection({ album }: GalleryAlbumSectionProps)
 
       <div className={GALLERY_SLIDER_WRAP}>
         <Swiper
-          modules={[Navigation]}
+          modules={[Autoplay, Navigation]}
           navigation
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          loop
           spaceBetween={16}
           slidesPerView={1}
           className={`${SWIPER_NAV} ${GALLERY_CAROUSEL}`.trim()}
