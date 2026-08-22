@@ -104,6 +104,29 @@ export interface InterviewQA {
   answer: string;
 }
 
+/** Блок описания тренера: абзац или маркированный список */
+export type CoachContentBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] };
+
+/** Профиль тренера на странице «Тренерский состав» */
+export interface CoachProfile {
+  name: string;
+  rank: string;
+  /** Описание (абзацы и списки достижений) */
+  blocks: CoachContentBlock[];
+  /** Телефон для записи (если отличается от общего контактного) */
+  phone?: string;
+  /** Для tel: ссылки (без +, скобок, пробелов) */
+  phoneRaw?: string;
+  /** Подпись к телефону (по умолчанию «Телефон тренера:») */
+  phoneLabel?: string;
+  /** Показывать общее расписание клуба */
+  showSchedule?: boolean;
+  /** Фото тренера (слайды Swiper) */
+  slides: SlideItem[];
+}
+
 /** Yandex Maps */
 export interface MapData {
   /** URL для <iframe> */
@@ -131,4 +154,6 @@ export interface GalleryVideo {
   title: string;
   src: string; // путь к .mp4
   poster: string; // путь к кадру-превью
+  /** Вертикальное видео (Instagram-стиль) — ограничиваем по высоте */
+  vertical?: boolean;
 }

@@ -15,6 +15,7 @@
 
 ### Fixed / Optimized
 - `kudo-video-bg.mp4` сжат: 35 MB → 10 MB (H.264, 720p, CRF 28, без аудио)
+- Все видео галереи и `kudo-doblest.mp4` сжаты: ~143 MB → ~76 MB (H.264, CRF 28, портретные до 720×1280, аудио 96 kbps AAC)
 - Шрифты переведены `.ttf` → `.woff2`: суммарно ~475 KB → ~186 KB (−60%)
 
 ## [Unreleased]

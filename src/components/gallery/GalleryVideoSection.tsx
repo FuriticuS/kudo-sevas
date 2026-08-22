@@ -4,6 +4,8 @@ import {
   GALLERY_ALBUM_TITLE,
   GALLERY_SLIDER_WRAP,
   GALLERY_VIDEO,
+  GALLERY_VIDEO_VERTICAL_WRAP,
+  GALLERY_VIDEO_VERTICAL,
 } from "@/lib/styles";
 
 interface GalleryVideoSectionProps {
@@ -11,12 +13,17 @@ interface GalleryVideoSectionProps {
 }
 
 export default function GalleryVideoSection({ video }: GalleryVideoSectionProps) {
+  const wrapClass = video.vertical
+    ? GALLERY_VIDEO_VERTICAL_WRAP
+    : GALLERY_SLIDER_WRAP;
+  const videoClass = video.vertical ? GALLERY_VIDEO_VERTICAL : GALLERY_VIDEO;
+
   return (
     <article className={GALLERY_CARD}>
       <h2 className={GALLERY_ALBUM_TITLE}>{video.title}</h2>
-      <div className={GALLERY_SLIDER_WRAP}>
+      <div className={wrapClass}>
         <video
-          className={GALLERY_VIDEO}
+          className={videoClass}
           controls
           playsInline
           preload="metadata"

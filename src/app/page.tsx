@@ -8,6 +8,7 @@ import JsonLd from "@/components/ui/JsonLd";
 import HeroSection from "@/components/sections/HeroSection";
 import FounderSection from "@/components/sections/FounderSection";
 import CoachSection from "@/components/sections/CoachSection";
+import ChildrenSection from "@/components/sections/ChildrenSection";
 import ClubSection from "@/components/sections/ClubSection";
 import ContactsSection from "@/components/sections/ContactsSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
@@ -29,6 +30,7 @@ export default function HomePage() {
       <FounderSection />
       <ClubSection />
       <CoachSection />
+      <ChildrenSection />
       <ContactsSection />
       <ReviewsSection />
     </>

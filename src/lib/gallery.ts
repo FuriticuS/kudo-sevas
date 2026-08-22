@@ -11,6 +11,48 @@ export const GALLERY_VIDEOS: GalleryVideo[] = [
     src: "/video/kudo-doblest.mp4",
     poster: "/video/club-poster.webp",
   },
+  {
+    title: "Послание",
+    src: "/video/clips/poslanie.mp4",
+    poster: "/video/clips/poslanie-poster.webp",
+    vertical: true,
+  },
+  {
+    title: "Пояс в кудо",
+    src: "/video/clips/poyasvkudo.mp4",
+    poster: "/video/clips/poyasvkudo-poster.webp",
+    vertical: true,
+  },
+  {
+    title: "Сборы",
+    src: "/video/clips/sbori.mp4",
+    poster: "/video/clips/sbori-poster.webp",
+    vertical: true,
+  },
+  {
+    title: "Тренировка 15.04.2026",
+    src: "/video/clips/trenirovka1.mp4",
+    poster: "/video/clips/trenirovka1-poster.webp",
+    vertical: true,
+  },
+  {
+    title: "Тренировка 27.05.2026",
+    src: "/video/clips/trenirovka2.mp4",
+    poster: "/video/clips/trenirovka2-poster.webp",
+    vertical: true,
+  },
+  {
+    title: "Тренировка 10.06.2026",
+    src: "/video/clips/trenirovka3.mp4",
+    poster: "/video/clips/trenirovka3-poster.webp",
+    vertical: true,
+  },
+  {
+    title: "Тренировка 30.07.2026",
+    src: "/video/clips/trenirovka4.mp4",
+    poster: "/video/clips/trenirovka4-poster.webp",
+    vertical: true,
+  },
 ];
 
 export const GALLERY_ALBUMS: GalleryAlbum[] = [

@@ -214,12 +214,30 @@ export const COACH_QA_ANSWER = "space-y-3 text-base leading-relaxed text-light";
 // ============================================
 // Coaches (страница «Тренерский состав»)
 // ============================================
+export const COACHES_STACK = "space-y-10";
 export const COACHES_CARD = "rounded bg-light p-6 text-dark md:p-10";
 export const COACHES_LAYOUT =
   "grid items-start gap-10 md:grid-cols-2 [&>div]:min-w-0";
 export const COACHES_SLIDER_WRAP = "w-full";
 export const COACHES_CAROUSEL = "aspect-[4/3] w-full";
 export const COACHES_SLIDE = "relative block h-full w-full overflow-hidden rounded-xl";
+export const COACHES_IMAGE_WRAP = "flex items-start justify-center";
+export const COACHES_IMAGE = "h-auto w-full md:max-w-[425px]";
+
+// --- Блоки описания тренера (абзацы + списки) ---
+export const COACH_BLOCKS = "mt-6 max-w-xl space-y-4";
+export const COACH_PARAGRAPH = "text-base leading-relaxed text-gray";
+export const COACH_LIST = "space-y-2";
+export const COACH_LIST_ITEM =
+  "flex items-start gap-3 text-base leading-relaxed text-gray";
+export const COACH_PHONE =
+  "mt-6 max-w-xl text-base leading-relaxed text-gray";
+
+// ============================================
+// Children (младшая группа 3-5 лет, главная)
+// ============================================
+export const CHILDREN_SLIDER_WRAP = "mx-auto w-full max-w-[420px]";
+export const CAROUSEL_PORTRAIT = "aspect-[3/4]";
 
 // ============================================
 // Club
@@ -330,6 +348,9 @@ export const GALLERY_GRID = "grid gap-8 md:grid-cols-2";
 export const GALLERY_SECTION_TITLE = `${SECTION_TITLE} mb-8 text-light`;
 export const GALLERY_SECTION_TITLE_MT = `mt-12 ${GALLERY_SECTION_TITLE}`;
 export const GALLERY_VIDEO = "block h-auto w-full";
+export const GALLERY_VIDEO_VERTICAL_WRAP =
+  "flex items-center justify-center bg-dark p-6";
+export const GALLERY_VIDEO_VERTICAL = "block h-[360px] w-auto max-w-full";
 export const GALLERY_CARD = "flex flex-col overflow-hidden rounded bg-light text-dark";
 export const GALLERY_ALBUM_TITLE =
   "px-6 pt-6 text-xl font-extrabold uppercase tracking-tight md:text-2xl";
